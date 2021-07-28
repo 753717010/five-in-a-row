@@ -159,6 +159,7 @@
                 this.getWinner('heng');
                 this.getWinner('shu');
                 this.getWinner('xie');
+                this.getWinner('xie2');
                 if (this.status == 2) {
                     return;
                 }
@@ -207,6 +208,9 @@
                         }
                         if (type == 'xie') {
                             count += this.getNext({x: object.x + 1, y: object.y + 1}, type);
+                        }
+                        if (type == 'xie2') {
+                            count += this.getNext({x: object.x + 1, y: object.y - 1}, type);
                         }
                         if (count >= 5) {
                             return 5;
